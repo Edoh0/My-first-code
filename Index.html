@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Facts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        #fact { font-size: 1.2em; margin-bottom: 20px; }
+        button { padding: 8px 16px; font-size: 1em; }
+    </style>
+</head>
+<body>
+    <h1>Random Fact</h1>
+    <div id="fact"></div>
+    <button onclick="showRandomFact()">Show Another Fact</button>
+
+    <script>
+        const facts = [
+            "Honey never spoils.",
+            "Bananas are berries but strawberries are not.",
+            "A group of flamingos is called a 'flamboyance'.",
+            "Octopuses have three hearts.",
+            "The Eiffel Tower can be 15 cm taller during hot days."
+        ];
+
+        function showRandomFact() {
+            const index = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[index];
+        }
+
+        window.onload = showRandomFact;
+    </script>
+</body>
+</html>
 
